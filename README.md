@@ -10,3 +10,4 @@ which is now deprecated - and as everyone knows, Rust is god's gift to programme
 - proper volume control / audio stream fixes
 - improve UI
 - improve status communication to user
+- proper gradle build flow
