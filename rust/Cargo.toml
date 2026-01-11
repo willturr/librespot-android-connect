@@ -1,0 +1,34 @@
+[package]
+name = "spotify_receiver_core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# JNI for Android communication
+jni = "0.21"
+
+# Async Runtime
+tokio = { version = "1", features = ["full"] }
+futures = "0.3" # Required for StreamExt (discovery.next)
+
+# Logging
+log = "0.4"
+android_logger = "0.13"
+
+# Librespot Core Components
+librespot-core = "0.4"
+librespot-playback = "0.4"
+librespot-protocol = "0.4"
+librespot-discovery = "0.4"
+librespot-metadata = "0.4"
+librespot-audio = "0.4"
+
+# Audio Backend
+rodio = { version = "0.17", default-features = false }
+
+# Crypto
+sha1 = "0.10"
+hex = "0.4"
